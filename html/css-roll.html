@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* 左右滑动，移动端有效 */
+        
+        div {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            overflow: auto;
+        }
+        
+        div::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .sp {
+            flex-shrink: 0;
+            width: 300px;
+            height: 50px;
+            margin: 10px;
+            background-color: pink;
+        }
+        
+        .spnn {
+            position: sticky;
+            top: 0px;
+            background-color: red;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            line-height: 50px;
+        }
+        /* 上下滚动,比上面多加了 flex-direction: column;属性 */
+        
+        div.sx {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            overflow: auto;
+            flex-direction: column;
+        }
+        
+        div.sx::-webkit-scrollbar {
+            display: none;
+        }
+        
+        div.sx .sp {
+            flex-shrink: 0;
+            width: 300px;
+            height: 50px;
+            margin: 10px;
+            background-color: pink;
+        }
+        
+        div.sx .spnn {
+            position: sticky;
+            top: 0px;
+            background-color: red;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <!-- <h2> 左右滑动</h2> -->
+    <div>
+        <span class="sp">1</span>
+        <span class="sp">2</span>
+        <span class="sp">3</span>
+        <span class="sp">4</span>
+        <span class="sp">5</span>
+        <span class="sp">6</span>
+        <span class="sp">7</span>
+        <span class="sp spnn">8</span>
+        <span class="sp">9</span>
+        <span class="sp">10</span>
+    </div>
+    <div class="sx">
+        <span class="sp">1</span>
+        <span class="sp">2</span>
+        <span class="sp">3</span>
+        <span class="sp">4</span>
+        <span class="sp">5</span>
+        <span class="sp">6</span>
+        <span class="sp">7</span>
+        <span class="sp spnn">8</span>
+        <span class="sp">9</span>
+        <span class="sp">10</span>
+    </div>
+</body>
+
+</html>
