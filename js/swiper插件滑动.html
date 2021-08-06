@@ -9,6 +9,17 @@
     <!-- <link rel="stylesheet" href="./css/swiper-3.4.2.min.css"> -->
 </head>
 <style>
+    ul,
+    li,
+    div {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
     .swiper-container {
         width: 200px;
         height: 100px;
@@ -19,7 +30,7 @@
     
     .swiper-wrapper {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     
     .swiper-slide {
@@ -28,30 +39,6 @@
         height: 100px;
         background-color: pink;
         margin-right: 10px;
-    }
-    
-    .lunbo {
-        width: 300px;
-        height: 100px;
-        border: 1px solid #ccc;
-        overflow: hidden;
-    }
-    
-    .lunbo ul {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .lunbo ul li {
-        width: 100%;
-        height: 100%;
-        flex-shrink: 0;
-        /*子元素不被挤压*/
-        background-color: red;
-        line-height: 100px;
-        text-align: center;
-        color: #fff;
     }
 </style>
 
@@ -63,31 +50,15 @@
             <div class="swiper-slide">Slide 3</div>
         </div>
     </div>
-
-    <div class="lunbo">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-        </ul>
-    </div>
     <script src="./js/swiper-3.4.2.min.js"></script>
     <script>
         var mySwiper = new Swiper('.swiper-container', {
             updateOnWindowResize: true,
             slidesPerView: "auto", //slide宽高自己设置
-            // direction: 'vertical',上下滑动
+            // direction: 'vertical',
+            // 上下滑动
             // loop: true,
         });
-        // var mylunbo = new Swiper('.lunbo', {
-        //     // updateOnWindowResize: true,
-        //     slidesPerView: "auto", //slide宽高自己设置
-        //     // direction: 'vertical',上下滑动
-        //     loop: true,
-        // })
     </script>
 </body>
 
